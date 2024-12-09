@@ -1,13 +1,13 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import { LegendList } from "@legendapp/list";
 
 export default function HomeScreen() {
 	return (
 		<LegendList
-			data={["one", "two", "three", "four", "five", "six"]}
-			estimatedItemSize={100}
+			data={["red", "blue", "green", "yellow", "purple", "orange"]}
+			estimatedItemSize={250}
 			renderItem={({ item }) => (
-				<Text style={{ color: "white", height: 100 }}>{item}</Text>
+				<View style={{ backgroundColor: item, height: 250 }} />
 			)}
 		/>
 	);
